@@ -1,0 +1,165 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment/aws-copilot-pipeline
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 129
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 72
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 805
+    content: "\e[01;32m\e[00m:\e[01;34m~/environment/aws-copilot-pipeline\e[00m (master) $ "
+  - delay: 4595
+    content: c
+  - delay: 185
+    content: o
+  - delay: 81
+    content: p
+  - delay: 173
+    content: i
+  - delay: 88
+    content: l
+  - delay: 171
+    content: o
+  - delay: 110
+    content: t
+  - delay: 95
+    content: ' '
+  - delay: 177
+    content: s
+  - delay: 185
+    content: v
+  - delay: 176
+    content: c
+  - delay: 120
+    content: ' '
+  - delay: 102
+    content: s
+  - delay: 146
+    content: h
+  - delay: 54
+    content: o
+  - delay: 120
+    content: w
+  - delay: 142
+    content: "\r\n"
+  - delay: 157
+    content: "Only found one service, defaulting to: \e[1mreverse-string\e[0m\r\n"
+  - delay: 464
+    content: "\e[1mAbout\r\n\r\n\e[0m  Application       reverse-string\r\n  Name              reverse-string\r\n  Type              Load Balanced Web Service\r\n\e[1m\r\nConfigurations\r\n\r\n\e[0m  Environment       Tasks               CPU (vCPU)          Memory (MiB)        Port\r\n  test              1                   0.25                512                 3000\r\n\e[1m\r\nRoutes\r\n\r\n\e[0m  Environment       URL\r\n  test              http://rever-Publi-16ESSDGAZBBUI-732738326.us-east-2.elb.amazonaws.com\r\n\e[1m\r\nService Discovery\r\n\r\n\e[0m  Environment       Namespace\r\n  test              reverse-string.reverse-string.local:3000\r\n\e[1m\r\nVariables\r\n\r\n\e[0m  Name                                Environment         Value\r\n  COPILOT_APPLICATION_NAME            test                reverse-string\r\n  COPILOT_ENVIRONMENT_NAME            test                test\r\n  COPILOT_LB_DNS                      test                rever-Publi-16ESSDGAZBBUI-732738326.us-east-2.elb.amazonaws.com\r\n  COPILOT_SERVICE_DISCOVERY_ENDPOINT  test                reverse-string.local\r\n  COPILOT_SERVICE_NAME                test                reverse-string\r\n"
+  - delay: 7
+    content: "\e[01;32m\e[00m:\e[01;34m~/environment/aws-copilot-pipeline\e[00m (master) $ "
+  - delay: 1767
+    content: e
+  - delay: 193
+    content: x
+  - delay: 111
+    content: i
+  - delay: 121
+    content: t
+  - delay: 104
+    content: "\r\nlogout\r\n"
