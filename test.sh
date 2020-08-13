@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build ./test -t reverse-string-test
-docker run -it -e APP_URL=$(aws cloudformation describe-stacks --stack-name reverse-string-production --query "Stacks[0].Outputs[?OutputKey=='PublicLoadBalancerDNSName'].OutputValue" --output text) reverse-string-test
+npm install --prefix test
+APP_URL=$(aws cloudformation describe-stacks --stack-name reverse-string-test --query "Stacks[0].Outputs[?OutputKey=='PublicLoadBalancerDNSName'].OutputValue" --output text) npm test --prefix test
