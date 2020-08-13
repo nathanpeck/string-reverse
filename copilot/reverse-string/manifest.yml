@@ -9,13 +9,13 @@ type: Load Balanced Web Service
 
 image:
   # Path to your service's Dockerfile.
-  build: ./Dockerfile
+  build: ./app/Dockerfile
   # Port exposed through your container to route traffic to it.
   port: 3000
 
 http:
-  # Requests to this path will be forwarded to your service. 
-  # To match all requests you can use the "/" path. 
+  # Requests to this path will be forwarded to your service.
+  # To match all requests you can use the "/" path.
   path: '/'
   # You can specify a custom health check path. The default is "/"
   # healthcheck: '/'

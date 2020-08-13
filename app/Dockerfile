@@ -1,9 +1,9 @@
-FROM node:13 AS build
+FROM node:14 AS build
 WORKDIR /srv
 ADD package.json .
 RUN npm install
 
-FROM node:13-slim
+FROM node:14-slim
 WORKDIR /srv
 COPY --from=build /srv .
 ADD . .
