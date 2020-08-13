@@ -25,8 +25,7 @@ stages:
       name: test
       # Optional: use test commands to validate this stage of your build.
       test_commands:
-        - docker build . -t reverse-string-test
-        - docker run -it -e APP_URL=$(aws cloudformation describe-stacks --stack-name reverse-string-production --query "Stacks[0].Outputs[?OutputKey=='PublicLoadBalancerDNSName'].OutputValue" --output text) reverse-string-test
+        - test.sh
     - # The name of the environment to deploy to.
       name: production
       # Optional: use test commands to validate this stage of your build.
