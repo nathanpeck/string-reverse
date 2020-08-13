@@ -1,0 +1,16 @@
+{
+  "name": "reverse-string-tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expect": "^26.3.0",
+    "superagent": "^6.0.0",
+    "jest": "^26.3.0"
+  }
+}
