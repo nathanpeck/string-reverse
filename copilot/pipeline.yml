@@ -1,7 +1,7 @@
 # This YAML file defines the relationship and deployment ordering of your environments.
 
 # The name of the pipeline
-name: pipeline-reverse-string-nathanpeck-string-reverse
+name: pipeline-std-nathanpeck-string-reverse
 
 # The version of the schema used in this template
 version: 1
@@ -14,7 +14,7 @@ source:
   # the artifacts should be sourced from. For example, the GitHub provider
   # has the following properties: repository, branch.
   properties:
-    access_token_secret: github-token-reverse-string-string-reverse
+    access_token_secret: github-token-std-string-reverse
     branch: master
     repository: https://github.com/nathanpeck/string-reverse
 
@@ -24,9 +24,10 @@ stages:
     - # The name of the environment to deploy to.
       name: test
       # Optional: use test commands to validate this stage of your build.
-      test_commands:
-        - ./test.sh
+      # test_commands: [echo 'running tests', make test]
+
     - # The name of the environment to deploy to.
-      name: production
+      name: prod
       # Optional: use test commands to validate this stage of your build.
       # test_commands: [echo 'running tests', make test]
+

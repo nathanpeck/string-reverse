@@ -1,7 +1,6 @@
 FROM node:14 AS build
 WORKDIR /srv
-ADD package.json .
-RUN npm install
+RUN npm install raw-body
 
 FROM node:14-slim
 WORKDIR /srv

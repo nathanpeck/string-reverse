@@ -1,21 +1,21 @@
-# The manifest for the "reverse-string" service.
+# The manifest for the "reverse" service.
 # Read the full specification for the "Load Balanced Web Service" type at:
 #  https://github.com/aws/copilot-cli/wiki/Manifests#load-balanced-web-svc
 
 # Your service name will be used in naming your resources like log groups, ECS services, etc.
-name: reverse-string
+name: reverse
 # The "architecture" of the service you're running.
 type: Load Balanced Web Service
 
 image:
   # Path to your service's Dockerfile.
-  build: ./app/Dockerfile
+  build: app/Dockerfile
   # Port exposed through your container to route traffic to it.
   port: 3000
 
 http:
-  # Requests to this path will be forwarded to your service.
-  # To match all requests you can use the "/" path.
+  # Requests to this path will be forwarded to your service. 
+  # To match all requests you can use the "/" path. 
   path: '/'
   # You can specify a custom health check path. The default is "/"
   # healthcheck: '/'

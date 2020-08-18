@@ -41,8 +41,9 @@ phases:
           if [ -f "$ADDONSFILE" ]; then
             tmp=$(mktemp)
             timestamp=$(date +%s)
-            aws s3 cp "$ADDONSFILE" "s3://stackset-reverse-string-pipelinebuiltartifactbuc-1qmhzah0ykfrb/manual/$timestamp/$svc.addons.stack.yml";
-            jq --arg a "https://stackset-reverse-string-pipelinebuiltartifactbuc-1qmhzah0ykfrb.s3-us-east-2.amazonaws.com/manual/$timestamp/$svc.addons.stack.yml" '.Parameters.AddonsTemplateURL = $a' ./infrastructure/$svc-test.params.json > "$tmp" && mv "$tmp" ./infrastructure/$svc-test.params.json
+            aws s3 cp "$ADDONSFILE" "s3://stackset-std-infrastruct-pipelinebuiltartifactbuc-14sxe5xzoip0f/manual/$timestamp/$svc.addons.stack.yml";
+            jq --arg a "https://stackset-std-infrastruct-pipelinebuiltartifactbuc-14sxe5xzoip0f.s3-us-east-2.amazonaws.com/manual/$timestamp/$svc.addons.stack.yml" '.Parameters.AddonsTemplateURL = $a' ./infrastructure/$svc-test.params.json > "$tmp" && mv "$tmp" ./infrastructure/$svc-test.params.json
+            jq --arg a "https://stackset-std-infrastruct-pipelinebuiltartifactbuc-14sxe5xzoip0f.s3-us-east-2.amazonaws.com/manual/$timestamp/$svc.addons.stack.yml" '.Parameters.AddonsTemplateURL = $a' ./infrastructure/$svc-prod.params.json > "$tmp" && mv "$tmp" ./infrastructure/$svc-prod.params.json
           fi
         done;
       # Build images
