@@ -25,7 +25,8 @@ stages:
       name: test
       # Optional: use test commands to validate this stage of your build.
       test_commands:
-        - ./test.sh
+        - npm install --prefix test
+        - APP_URL=https://reverse.test.std.string.services npm test --prefix test
 
     - # The name of the environment to deploy to.
       name: prod
