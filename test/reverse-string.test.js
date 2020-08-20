@@ -11,3 +11,8 @@ test('should be able to reverse a simple string', async () => {
   const res = await superagent.post(url).send('Hello');
   expect(res.text).toEqual('olleH');
 });
+
+test('should be able to reverse a string containing UTF-8 characters', async () => {
+  const res = await superagent.post(url).send('Hello 😊');
+  expect(res.text).toEqual('😊 olleH');
+});
