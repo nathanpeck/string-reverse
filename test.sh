@@ -1,3 +1,3 @@
 #!/bin/bash
 npm install --prefix test
-APP_URL=$(aws cloudformation describe-stacks --stack-name reverse-test --query "Stacks[0].Outputs[?OutputKey=='PublicLoadBalancerDNSName'].OutputValue" --output text) npm test --prefix test
+APP_URL='https://reverse.test.std.string.services' npm test --prefix test
