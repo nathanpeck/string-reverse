@@ -6,7 +6,8 @@ var server = http.createServer(function (req, res) {
   getRawBody(req)
     .then(function (buf) {
       res.statusCode = 200;
-      res.end(runes(buf.toString()).reverse().join(""));
+      let stringRunes = runes(buf.toString());
+      res.end(stringRunes.reverse().join(""));
     })
     .catch(function (err) {
       res.statusCode = 500;
