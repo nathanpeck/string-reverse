@@ -14,3 +14,8 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(3000);
+
+process.on('SIGTERM', function () {
+  server.close();
+  process.exit(0);
+})
