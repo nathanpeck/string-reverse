@@ -1,7 +1,7 @@
 # This YAML file defines the relationship and deployment ordering of your environments.
 
 # The name of the pipeline
-name: pipeline-std-nathanpeck-string-reverse
+name: pipeline-std-string-reverse
 
 # The version of the schema used in this template
 version: 1
@@ -14,9 +14,10 @@ source:
   # the artifacts should be sourced from. For example, the GitHub provider
   # has the following properties: repository, branch.
   properties:
-    access_token_secret: github-token-std-string-reverse
-    branch: master
+    branch: main
     repository: https://github.com/nathanpeck/string-reverse
+    # Optional: specify the name of an existing CodeStar Connections connection.
+    # connection_name: a-connection
 
 # The deployment section defines the order the pipeline will deploy
 # to your environments.
